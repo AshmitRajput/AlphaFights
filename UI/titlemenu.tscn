@@ -1,0 +1,686 @@
+[gd_scene load_steps=89 format=2]
+
+[ext_resource path="res://UI/more fonts/VT323-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Player/Player.png" type="Texture" id=2]
+[ext_resource path="res://UI/more fonts/KiriFont.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://UI/Alpha Fights.png" type="Texture" id=4]
+[ext_resource path="res://UI/UI/arrow-UP.png" type="Texture" id=5]
+[ext_resource path="res://UI/UI/grey_button13.png" type="Texture" id=6]
+[ext_resource path="res://UI/more fonts/Sniglet-Regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://UI/UI/grey_button04.png" type="Texture" id=8]
+[ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=9]
+[ext_resource path="res://UI/HUD/coin_gold.png" type="Texture" id=10]
+[ext_resource path="res://UI/PlayButton.gd" type="Script" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+outline_size = 2
+outline_color = Color( 1, 0.560784, 0.560784, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+outline_size = 2
+outline_color = Color( 1, 0.560784, 0.560784, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.941176, 0.670588, 0.670588, 1 )
+border_width_left = 3
+border_width_top = 3
+border_color = Color( 0.0980392, 0.0705882, 0.0705882, 1 )
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="DynamicFont" id=4]
+size = 10
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 6
+outline_color = Color( 1, 0.636735, 0.636735, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 9
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 6
+outline_color = Color( 0.894118, 0.568627, 0.568627, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 6
+outline_size = 1
+outline_color = Color( 0.0784314, 0.0784314, 0.0784314, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 6
+outline_color = Color( 0.862745, 0.545098, 0.545098, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 2 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 2 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 2 )
+region = Rect2( 256, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 2 )
+region = Rect2( 320, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 2 )
+region = Rect2( 384, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 2 )
+region = Rect2( 448, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 2 )
+region = Rect2( 512, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 2 )
+region = Rect2( 576, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 2 )
+region = Rect2( 640, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 2 )
+region = Rect2( 704, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 2 )
+region = Rect2( 768, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 2 )
+region = Rect2( 832, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 2 )
+region = Rect2( 896, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 2 )
+region = Rect2( 960, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 2 )
+region = Rect2( 1024, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 2 )
+region = Rect2( 1088, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 2 )
+region = Rect2( 1152, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 2 )
+region = Rect2( 1216, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 2 )
+region = Rect2( 1280, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 2 )
+region = Rect2( 1344, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 2 )
+region = Rect2( 1408, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 2 )
+region = Rect2( 1472, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 2 )
+region = Rect2( 1536, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 2 )
+region = Rect2( 1600, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 2 )
+region = Rect2( 1664, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 2 )
+region = Rect2( 1728, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 2 )
+region = Rect2( 1792, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 2 )
+region = Rect2( 1856, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 2 )
+region = Rect2( 1920, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 2 )
+region = Rect2( 1984, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 2 )
+region = Rect2( 2048, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 2 )
+region = Rect2( 2112, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 2 )
+region = Rect2( 2176, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 2 )
+region = Rect2( 2240, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 2 )
+region = Rect2( 2304, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 2 )
+region = Rect2( 2368, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 2 )
+region = Rect2( 2432, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=49]
+atlas = ExtResource( 2 )
+region = Rect2( 2496, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=50]
+atlas = ExtResource( 2 )
+region = Rect2( 2560, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = ExtResource( 2 )
+region = Rect2( 2624, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 2 )
+region = Rect2( 2688, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=53]
+atlas = ExtResource( 2 )
+region = Rect2( 2752, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=54]
+atlas = ExtResource( 2 )
+region = Rect2( 2816, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=55]
+atlas = ExtResource( 2 )
+region = Rect2( 2880, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=56]
+atlas = ExtResource( 2 )
+region = Rect2( 2944, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=57]
+atlas = ExtResource( 2 )
+region = Rect2( 3008, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=58]
+atlas = ExtResource( 2 )
+region = Rect2( 3072, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=59]
+atlas = ExtResource( 2 )
+region = Rect2( 3136, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=60]
+atlas = ExtResource( 2 )
+region = Rect2( 3200, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 2 )
+region = Rect2( 3264, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=62]
+atlas = ExtResource( 2 )
+region = Rect2( 3328, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=63]
+atlas = ExtResource( 2 )
+region = Rect2( 3392, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=64]
+atlas = ExtResource( 2 )
+region = Rect2( 3456, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 2 )
+region = Rect2( 3520, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=66]
+atlas = ExtResource( 2 )
+region = Rect2( 3584, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 2 )
+region = Rect2( 3648, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 2 )
+region = Rect2( 3712, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=69]
+atlas = ExtResource( 2 )
+region = Rect2( 3776, 0, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=70]
+animations = [ {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ) ],
+"loop": true,
+"name": "player",
+"speed": 8.0
+} ]
+
+[sub_resource type="StyleBoxFlat" id=71]
+bg_color = Color( 0.941176, 0.670588, 0.670588, 1 )
+border_width_left = 3
+border_width_top = 3
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="DynamicFont" id=72]
+size = 10
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=73]
+size = 7
+outline_color = Color( 0.94902, 0.913725, 0.913725, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=74]
+size = 6
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=75]
+size = 6
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=76]
+size = 6
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=77]
+size = 20
+outline_size = 1
+outline_color = Color( 0.458824, 0.0901961, 0.0901961, 1 )
+font_data = ExtResource( 1 )
+
+[node name="titlemenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_top = 1.0
+margin_right = 320.0
+margin_bottom = 181.0
+color = Color( 0.513726, 0.823529, 0.839216, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bat3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 178, 43 )
+scale = Vector2( 1.40625, 1.28125 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 21.0
+margin_top = 3.0
+margin_right = 141.0
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ALPHA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+margin_left = 151.0
+margin_top = 29.0
+margin_right = 319.0
+margin_bottom = 89.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "FIGHTS!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 25.0
+margin_top = 3.0
+margin_right = 292.0
+margin_bottom = 153.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftPanel" type="Panel" parent="."]
+margin_left = 7.0
+margin_top = 110.0
+margin_right = 124.0
+margin_bottom = 175.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="LeftPanel"]
+margin_left = 27.0
+margin_top = 7.0
+margin_right = 97.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.356863, 0.964706, 0.937255, 1 )
+custom_colors/font_color_shadow = Color( 0.717647, 0.411765, 0.411765, 1 )
+text = "Controls"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="LeftPanel"]
+margin_left = 18.0
+margin_top = 25.0
+margin_right = 27.0
+margin_bottom = 33.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="LeftPanel"]
+margin_left = 8.0
+margin_top = 34.0
+margin_right = 17.0
+margin_bottom = 42.0
+texture = ExtResource( 6 )
+expand = true
+
+[node name="TextureRect3" type="TextureRect" parent="LeftPanel"]
+margin_left = 18.0
+margin_top = 34.0
+margin_right = 27.0
+margin_bottom = 42.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect9" type="TextureRect" parent="LeftPanel"]
+margin_left = 71.0
+margin_top = 27.0
+margin_right = 89.0
+margin_bottom = 43.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect4" type="TextureRect" parent="LeftPanel"]
+margin_left = 28.0
+margin_top = 34.0
+margin_right = 37.0
+margin_bottom = 42.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect5" type="TextureRect" parent="LeftPanel"]
+margin_left = 20.0
+margin_top = 27.0
+margin_right = 25.0
+margin_bottom = 31.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="TextureRect6" type="TextureRect" parent="LeftPanel"]
+margin_left = 20.0
+margin_top = 36.0
+margin_right = 25.0
+margin_bottom = 40.0
+texture = ExtResource( 5 )
+expand = true
+flip_v = true
+
+[node name="TextureRect7" type="TextureRect" parent="LeftPanel"]
+margin_left = 15.0
+margin_top = 36.0
+margin_right = 19.0
+margin_bottom = 41.0
+rect_rotation = 90.0
+texture = ExtResource( 5 )
+expand = true
+flip_v = true
+
+[node name="TextureRect8" type="TextureRect" parent="LeftPanel"]
+margin_left = 35.0
+margin_top = 36.0
+margin_right = 39.0
+margin_bottom = 41.0
+rect_rotation = 90.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Label2" type="Label" parent="LeftPanel"]
+margin_left = 38.0
+margin_top = 31.0
+margin_right = 69.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "- move"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="LeftPanel"]
+margin_left = 72.0
+margin_top = 29.0
+margin_right = 87.0
+margin_bottom = 41.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Ctrl"
+
+[node name="Label4" type="Label" parent="LeftPanel"]
+margin_left = 91.0
+margin_top = 31.0
+margin_right = 113.0
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "-Roll"
+
+[node name="TextureRect10" type="TextureRect" parent="LeftPanel"]
+margin_left = 18.0
+margin_top = 46.0
+margin_right = 63.0
+margin_bottom = 60.0
+texture = ExtResource( 8 )
+expand = true
+
+[node name="Label5" type="Label" parent="LeftPanel"]
+margin_left = 28.0
+margin_top = 49.0
+margin_right = 63.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 8 )
+text = "Spacebar"
+
+[node name="Label6" type="Label" parent="LeftPanel"]
+margin_left = 67.0
+margin_top = 51.0
+margin_right = 100.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "-Attack"
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 167, 139 )
+scale = Vector2( 1.40625, 1.28125 )
+frames = SubResource( 70 )
+animation = "player"
+frame = 8
+playing = true
+
+[node name="Bat" parent="." instance=ExtResource( 9 )]
+position = Vector2( 44, 94 )
+scale = Vector2( 1.40625, 1.28125 )
+
+[node name="Bat2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 282, 43 )
+scale = Vector2( 1.40625, 1.28125 )
+
+[node name="RightPanel" type="Panel" parent="."]
+margin_left = 208.0
+margin_top = 110.0
+margin_right = 316.0
+margin_bottom = 175.0
+custom_styles/panel = SubResource( 71 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="RightPanel"]
+margin_left = 11.0
+margin_top = 7.0
+margin_right = 106.0
+margin_bottom = 21.0
+custom_fonts/font = SubResource( 72 )
+custom_colors/font_color = Color( 0.356863, 0.964706, 0.937255, 1 )
+custom_colors/font_color_shadow = Color( 0.717647, 0.411765, 0.411765, 1 )
+text = "Instructions"
+
+[node name="Label2" type="Label" parent="RightPanel"]
+margin_left = 7.0
+margin_top = 25.0
+margin_right = 109.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 73 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Beware of the Bats!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="RightPanel"]
+margin_left = 7.0
+margin_top = 37.0
+margin_right = 56.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 74 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Collect 10 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="RightPanel"]
+margin_left = 56.0
+margin_top = 33.0
+margin_right = 68.0
+margin_bottom = 45.0
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="RightPanel"]
+margin_left = 70.0
+margin_top = 37.0
+margin_right = 103.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 75 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "to Win!!"
+
+[node name="Label5" type="Label" parent="RightPanel"]
+margin_left = 10.0
+margin_top = 47.0
+margin_right = 103.0
+margin_bottom = 62.0
+custom_fonts/font = SubResource( 76 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Note: More the grass,
+         More the coins."
+
+[node name="PlayButton" type="Button" parent="."]
+margin_left = 137.0
+margin_top = 89.0
+margin_right = 197.0
+margin_bottom = 115.0
+custom_fonts/font = SubResource( 77 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.941176, 0.670588, 0.670588, 1 )
+custom_colors/font_color_hover = Color( 0.964706, 0.447059, 0.447059, 1 )
+custom_colors/font_color_pressed = Color( 0.556863, 0.0509804, 0.0509804, 1 )
+text = "PLAY>>"
+flat = true
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_PlayButton_pressed"]
